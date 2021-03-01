@@ -89,30 +89,36 @@
   .sect-1 {
     background: white;
   }
-  .sect-1 ol {
+  .sect-1 .list {
     display: flex;
     padding: 0;
     flex-direction: column;
     align-items: center;
   }
-  .sect-1 ol div {
-    padding: 20px 25px;
+  .sect-1 .list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
     margin-top: 20px;
     background-color: whitesmoke;
-    width: 70%;
+    width: 90vw;
     box-shadow: 0.5vw 0.5vh 1vw gainsboro;
     border-radius: 15px;
   }
-  .sect-1 ol div :hover {
-    background-color: #9356dc;
+  .sect-1 .list div :hover {
+    color: #9356dc;
   }
-  .sect-1 ol div i {
+  .sect-1 .list div i {
     color: grey;
   }
-  .sect-1 ol div i .fa-mobile-alt {
+  .sect-1 .list div i .fa-mobile-alt {
     font-size: larger;
   }
-  .sect-1 ol div span {
+  .sect-1 .list div i:hover {
+    color: #9356dc;
+  }
+  .sect-1 .list div span {
     padding-left: 15px;
   }
 
@@ -130,6 +136,286 @@
     height: 30vh;
     list-style: none;
     margin-top: 20px;
+  }
+  .sect_2 ul li i {
+    display: flex;
+    justify-content: flex-end;
+    font-size: larger;
+    position: relative;
+    right: 20px;
+    bottom: 30px;
+  }
+  .sect_2 ul li i:hover {
+    color: #9356dc;
+  }
+  .sect_2 ul img {
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 70%;
+  }
+  .sect_2 ul h4, .sect_2 ul p {
+    margin: 0;
+    padding: 5px 0 0 15px;
+  }
+  .sect_2 ul p {
+    font-family: roboto light;
+    font-size: small;
+  }
+
+  .sect-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
+  .sect-title h1 {
+    margin: 0;
+    font-family: shrikhand;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+  .sect-title h1 .french-title {
+    padding-right: 22vw;
+  }
+  .sect-title i {
+    padding-right: 4vw;
+    font-size: larger;
+  }
+
+  .bloc-enter h3 {
+    margin: 20px 0 0 19px;
+    font-family: roboto light;
+    font-weight: 500;
+    border-bottom: 3px solid #99e2d0;
+    width: fit-content;
+  }
+  .bloc-enter-figure {
+    background-color: white;
+    height: fit-content;
+    margin: auto;
+    width: 86%;
+    padding: 12px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0.5vw 0.5vh 1vw gainsboro;
+  }
+  .bloc-enter-figure h4, .bloc-enter-figure .sect_2 ul p, .sect_2 ul .bloc-enter-figure p {
+    font-size: 0.85em;
+    margin: 0;
+  }
+  .bloc-enter-figure span {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bloc-enter-figure p {
+    margin: 0;
+    font-size: 0.75em;
+    padding-top: 5px;
+    font-family: roboto light;
+    color: #525252;
+    font-weight: bold;
+  }
+  .bloc-enter-figure p strong {
+    color: initial;
+    font-family: roboto;
+    font-size: 1.05em;
+    padding-right: 8px;
+  }
+  .bloc-enter-figure p .french-paragraph {
+    font-size: 0.7em;
+    color: black;
+    font-family: roboto regular;
+  }
+
+  Button {
+    display: block;
+    margin: auto;
+    width: 53%;
+    margin-top: 8vh;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    font-size: 1em;
+    box-shadow: 0.5vw 0.5vh 1vw gainsboro;
+    background: linear-gradient(to top left, #9356dc, #ff79da);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding-left: 15px;
+    height: fit-content;
+    position: inherit;
+    color: white;
+    font-family: roboto light;
+  }
+  footer h3 {
+    color: white;
+    font-family: shrikhand;
+    font-weight: 100;
+  }
+  footer ul {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  footer ul li {
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 0.75em;
+  }
+  footer ul li i {
+    padding-right: 7px;
+  }
+  footer ul li a {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: 100;
+  }
+  footer ul .fa-hands-helping {
+    font-size: smaller;
+    padding-right: 4px;
+  }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  body {
+    margin: 0;
+    font-family: roboto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+    width: 100%;
+  }
+  header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+  }
+  header div .fa-arrow-left-hidden {
+    color: white;
+  }
+  header div img {
+    width: 37vw;
+    height: 4vh;
+  }
+  header img.back-image {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    top: 3.5vh;
+    z-index: 1;
+  }
+
+  nav {
+    background-color: whitesmoke;
+    height: fit-content;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding-bottom: 60px;
+  }
+  nav .city_food {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  nav h1 {
+    font-size: 1.4em;
+    font-family: roboto regular;
+  }
+  nav p {
+    font-family: roboto light;
+  }
+  nav button {
+    font-size: small;
+    font-family: roboto regular;
+    width: 60%;
+    margin-top: 25px;
+  }
+
+  section {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding-bottom: 15vh;
+    z-index: 2;
+    background-color: whitesmoke;
+  }
+
+  .sect-1 {
+    background: white;
+  }
+  .sect-1 .list {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sect-1 .list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    width: 90vw;
+    box-shadow: 0.5vw 0.5vh 1vw gainsboro;
+    border-radius: 15px;
+  }
+  .sect-1 .list div :hover {
+    color: #9356dc;
+  }
+  .sect-1 .list div i {
+    color: grey;
+  }
+  .sect-1 .list div i .fa-mobile-alt {
+    font-size: larger;
+  }
+  .sect-1 .list div i:hover {
+    color: #9356dc;
+  }
+  .sect-1 .list div span {
+    padding-left: 15px;
+  }
+
+  .sect_2 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .sect_2 ul li {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0.5vw 0.5vh 1vw #aaa;
+    width: 80%;
+    height: 30vh;
+    list-style: none;
+    margin-top: 20px;
+  }
+  .sect_2 ul li i {
+    display: flex;
+    justify-content: flex-end;
+    font-size: larger;
+    position: relative;
+    right: 20px;
+    bottom: 30px;
+  }
+  .sect_2 ul li i:hover {
+    color: #9356dc;
   }
   .sect_2 ul img {
     object-fit: cover;

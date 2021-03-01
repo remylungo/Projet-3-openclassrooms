@@ -103,25 +103,32 @@ $rose: #ff79da;
 
   .sect-1 {
     background: $white;
-    & ol {
+    & .list {
       display: $d-flex;
       padding: 0;
       flex-direction: column;
       align-items: center;
       & div {
-        padding: 20px 25px;
+        // padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
         margin-top: 20px;
         background-color: whitesmoke;
-        width: 70%;
+        width: 90vw;
         box-shadow: $ombre;
         border-radius: 15px;
         & :hover {
-          background-color: $violet;
+          color: $violet;
         }
         & i {
           color: grey;
           & .fa-mobile-alt {
             font-size: larger;
+          }
+          &:hover {
+            color: $violet;
           }
         }
         & span {
@@ -145,6 +152,305 @@ $rose: #ff79da;
         height: 30vh;
         list-style: none;
         margin-top: 20px;
+        & i {
+          display: flex;
+          justify-content: flex-end;
+          font-size: larger;
+          position: relative;
+          right: 20px;
+          bottom: 30px;
+
+          &:hover {
+            color: $violet;
+          }
+        }
+      }
+      & img {
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+        height: 70%;
+      }
+      & h4 {
+        margin: 0;
+        padding: 5px 0 0 15px;
+      }
+      & p {
+        @extend h4;
+        font-family: roboto light;
+        font-size: small;
+      }
+    }
+  }
+
+  .sect-title {
+    display: $d-flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding-top: 15px;
+    & h1 {
+      margin: 0;
+      font-family: shrikhand;
+      font-weight: 500;
+      font-size: 1.6em;
+      & .french-title {
+        padding-right: 22vw;
+      }
+    }
+    & i {
+      padding-right: 4vw;
+      font-size: larger;
+    }
+  }
+
+  .bloc-enter {
+    & h3 {
+      margin: 20px 0 0 19px;
+      font-family: roboto light;
+      font-weight: 500;
+      border-bottom: 3px solid $vert_menthe;
+      width: $contenu;
+    }
+    &-figure {
+      background-color: $white;
+      height: $contenu;
+      margin: auto;
+      width: 86%;
+      padding: 12px;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: $ombre;
+
+      & h4 {
+        font-size: 0.85em;
+        margin: 0;
+      }
+
+      & span {
+        display: $d-flex;
+        justify-content: space-between;
+      }
+
+      & p {
+        margin: 0;
+        font-size: 0.75em;
+        padding-top: 5px;
+        font-family: roboto light;
+        color: $gris;
+        font-weight: $gras;
+
+        & strong {
+          color: initial;
+          font-family: roboto;
+          font-size: 1.05em;
+          padding-right: 8px;
+        }
+
+        & .french-paragraph {
+          font-size: 0.7em;
+          color: $noir;
+          font-family: roboto regular;
+        }
+      }
+    }
+  }
+
+  Button {
+    display: block;
+    margin: auto;
+    width: 53%;
+    margin-top: 8vh;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    color: $white;
+    font-weight: 100;
+    font-size: 1em;
+    box-shadow: $ombre;
+    background: linear-gradient(to top left, $violet, $rose);
+  }
+
+  footer {
+    display: $d-flex;
+    flex-direction: $colonne;
+    background-color: $noir;
+    padding-left: 15px;
+    height: $contenu;
+    position: $initial;
+    color: $white;
+    font-family: roboto light;
+
+    & h3 {
+      color: $white;
+      font-family: shrikhand;
+      font-weight: 100;
+    }
+
+    & ul {
+      list-style: none;
+      margin-top: 0;
+      padding: 0;
+      justify-content: space-evenly;
+
+      & li {
+        font-weight: $gras;
+        padding-top: 5px;
+        font-size: 0.75em;
+
+        & i {
+          padding-right: 7px;
+        }
+
+        & a {
+          color: $initial;
+          text-decoration: $initial;
+          font-weight: 100;
+        }
+      }
+      .fa-hands-helping {
+        font-size: smaller;
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  body {
+    margin: 0;
+    font-family: roboto;
+  }
+  header {
+    display: $d-flex;
+    flex-direction: $colonne;
+    padding-top: 18px;
+    width: 100%;
+    & div {
+      display: $d-flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      & .fa-arrow-left-hidden {
+        color: $white;
+      }
+      & img {
+        width: 37vw;
+        height: 4vh;
+      }
+    }
+    & img.back-image {
+      width: 100%;
+      height: 35vh;
+      position: relative;
+      top: 3.5vh;
+      z-index: 1;
+    }
+  }
+
+  nav {
+    background-color: whitesmoke;
+    height: fit-content;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding-bottom: 60px;
+    & .city_food {
+      width: auto;
+      margin-top: 10px;
+      padding: 10px;
+      // background-color: whitesmoke; trouver une couleur plus fonçée + border top
+    }
+    & h1 {
+      font-size: 1.4em;
+      font-family: roboto regular;
+    }
+    & p {
+      font-family: roboto light;
+    }
+    & button {
+      font-size: small;
+      font-family: roboto regular;
+      width: 60%;
+      margin-top: 25px;
+    }
+  }
+
+  section {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: $contenu;
+    position: relative;
+    padding-bottom: 15vh;
+    z-index: 2;
+    background-color: whitesmoke;
+  }
+
+  .sect-1 {
+    background: $white;
+    & .list {
+      display: $d-flex;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      & div {
+        // padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        margin-top: 20px;
+        background-color: whitesmoke;
+        width: 90vw;
+        box-shadow: $ombre;
+        border-radius: 15px;
+        & :hover {
+          color: $violet;
+        }
+        & i {
+          color: grey;
+          & .fa-mobile-alt {
+            font-size: larger;
+          }
+          &:hover {
+            color: $violet;
+          }
+        }
+        & span {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+
+  .sect_2 {
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      & li {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0.5vw 0.5vh 1vw #aaa;
+        width: 80%;
+        height: 30vh;
+        list-style: none;
+        margin-top: 20px;
+        & i {
+          display: flex;
+          justify-content: flex-end;
+          font-size: larger;
+          position: relative;
+          right: 20px;
+          bottom: 30px;
+
+          &:hover {
+            color: $violet;
+          }
+        }
       }
       & img {
         object-fit: cover;
